@@ -12,7 +12,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   primaryAgentName: 'Mustafa Yıldırım',
   heroTitle: 'Akdeniz’de Hayalinizdeki Yaşama Adım Atın',
   heroSubtitle: 'Alanya Kalesi ve deniz manzaralı lüks villalar, denize sıfır rezidanslar ve Türk vatandaşlığına uygun yüksek getirili yatırımlar.',
-  heroImage: '/src/assets/images/hero_alanya_villa_1793604906893.jpg',
+  heroImage: 'emlakcı.jpg',
   heroVideoUrl: ''
 };
 
@@ -56,7 +56,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Özel Peyzaj Bahçesi'
     ],
     images: [
-      '/src/assets/images/listing_kargicak_villa_1793604907770.jpg'
+      '/ev1.jpg'
     ],
     description: 'Kargıcak tepelerinde, Toros Dağları ile Akdeniz’in eşsiz buluştuğu noktada konumlanan bu ultra lüks müstakil villa; sonsuzluk havuzu, geniş günbatımı terasları ve modern mimarisiyle hayalinizdeki yaşamı sunuyor. Türk vatandaşlığı kazanımına tam uygundur. Akıllı ev altyapısı, tüm odalarda ebeveyn banyosu ve kesintisiz deniz & Alanya Kalesi manzarası mevcuttur.',
     isFeatured: true,
@@ -100,7 +100,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Plaja Alt Geçitli Ulaşım'
     ],
     images: [
-      '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg'
+      '/ev2.jpg'
     ],
     description: 'Mahmutlar merkezde Barbaros Caddesi’ne ve Akdeniz sahiline sadece yürüme mesafesinde bulunan dairemiz, 5 yıldızlı otel konforunda sosyal olanaklara sahiptir. İtalyan marka beyaz eşyalar ve özel tasarım mobilyalarla donatılmıştır. Yüksek kira getirisi potansiyeliyle hem tatil evi hem de sağlam bir yatırım aracıdır.',
     isFeatured: true,
@@ -143,7 +143,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Granit Tezgahlı Ada Mutfak'
     ],
     images: [
-      '/src/assets/images/listing_cleopatra_penthouse_1793608562299.jpg'
+      '/ev3.jpg'
     ],
     description: 'Dünyaca ünlü Kleopatra Plajı’na birkaç adım mesafede yer alan bu ayrıcalıklı çatı dubleksi, Alanya Kalesi ve masmavi deniz manzarasına hakimdir. Üst katta geniş seyir terası, özel jakuzi ve ebeveyn süiti bulunmaktadır. Yıl boyunca kesintisiz turistik kiralama talebi mevcuttur.',
     isFeatured: true,
@@ -185,7 +185,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Kameralı Güvenlik'
     ],
     images: [
-      '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg'
+      '/ev4.jpg'
     ],
     description: 'Alanya’nın en nezih ve yeşil yerleşim bölgesi Oba’da, yeni tamamlanmış butik sitede uzun veya sezonluk kiralık 1+1 daire. Portakal bahçelerine bakan sessiz balkonu, modern dekorasyonu ve site içi havuzuyla huzurlu bir yaşam alanı sunar.',
     isFeatured: false,
@@ -226,7 +226,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Kesintisiz Deniz Manzaralı Geniş Balkon'
     ],
     images: [
-      '/src/assets/images/timelapse_project_emerald_1793604907854.jpg'
+      '/ev5.jpg'
     ],
     description: 'Kestel’in sakin sahil şeridinde, az katlı Akdeniz mimarisine sahip sitede ön cephe daire. Sabahları balkonunuzda dalga sesleriyle uyanabilir, alt geçitle doğrudan sitenin özel plajına geçebilirsiniz. Kaliteli işçilik ve geniş salon hacmi.',
     isFeatured: true,
@@ -267,7 +267,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Özel Şef Mutfağı'
     ],
     images: [
-      '/src/assets/images/listing_bektas_mansion_1793608562116.jpg'
+      '/ev6.jpg'
     ],
     description: 'Alanya’nın en prestijli tepe noktasında konuşlanan bu müstakil malikane, Alanya kalesinin gece aydınlatmasını ve Akdeniz körfezini 180 derece panoramik açıyla görür. Yıllık veya lüks sezonluk kiralamaya uygundur.',
     isFeatured: true,
@@ -307,7 +307,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Geniş Barbekülü Balkon'
     ],
     images: [
-      '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg'
+      '/ev7.jpg'
     ],
     description: 'Dünyaca ünlü İncekum sahilinin hemen arkasında çam ormanlarıyla çevrili projede, uygun fiyatlı ve sıfır 2+1 daire. Ailece sakin ve sağlıklı bir tatil geçirmek isteyenler için ideal.',
     isFeatured: false,
@@ -347,7 +347,7 @@ export const INITIAL_PROPERTIES: Property[] = [
       'Güvenlik ve Concierge Danışma'
     ],
     images: [
-      '/src/assets/images/listing_kargicak_villa_1793604907770.jpg'
+      '/ev8.jpg'
     ],
     description: 'Kargıcak sahilinde lüks kompleks içerisinde deniz manzaralı ferah 1+1 kiralık daire. Tüm mobilyalar ve beyaz eşyalar sıfır ayarındadır.',
     isFeatured: false,
@@ -363,7 +363,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
     deliveryDate: 'Aralık 2026',
     totalUnits: 180,
     currentProgressPercent: 82,
-    heroImage: '/src/assets/images/timelapse_project_emerald_1793604907854.jpg',
+    heroImage: '/ev4.jpg',
     videoUrl: '', // Ready for user's uploaded video file
     description: 'Akdeniz sahilinde 22.000 m² arazi üzerinde yükselen, 5 yıldızlı otel konseptli ultra lüks rezidans ve sahil kulübü projesi.',
     milestones: [
@@ -372,7 +372,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Zemin Etüdü & Fore Kazık Temel',
         date: 'Mart 2025',
         description: 'Jeolojik zemin iyileştirmesi, 32 metre derinlikte fore kazık uygulaması ve su yalıtımlı radye temel tamamlandı.',
-        image: '/src/assets/images/timelapse_project_emerald_1793604907854.jpg',
+        image: '/ev6.jpg',
         progressPercent: 20,
         concretePercent: 25,
         facadePercent: 0,
@@ -383,7 +383,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Betonarme Karkas & Kat Tabliyeleri',
         date: 'Ekim 2025',
         description: 'C35/40 dayanımlı beton dökümleri ve 8. kat kaba inşaat imalatı tamamlandı.',
-        image: '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg',
+        image: '/ev8.jpg',
         progressPercent: 55,
         concretePercent: 95,
         facadePercent: 20,
@@ -394,7 +394,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Dış Cephe Giydirme, Cam Balkon & İnce İşler',
         date: 'Nisan 2026',
         description: 'Isı yalıtımlı alüminyum doğramalar, sonsuzluk havuzları ve iç mimari uygulamaları devam ediyor.',
-        image: '/src/assets/images/timelapse_project_emerald_1793604907854.jpg',
+        image: '/ev1.jpg',
         progressPercent: 82,
         concretePercent: 100,
         facadePercent: 85,
@@ -409,7 +409,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
     deliveryDate: 'Kasım 2026',
     totalUnits: 64,
     currentProgressPercent: 75,
-    heroImage: '/src/assets/images/listing_cleopatra_penthouse_1793608562299.jpg',
+    heroImage: '/ev3.jpg',
     videoUrl: '', // Ready for user's uploaded video file
     description: 'Dünyaca ünlü Kleopatra Plajı’na yürüme mesafesinde, Akdeniz ve Alanya Kalesi panoramasına sahip rezidans projesi.',
     milestones: [
@@ -418,7 +418,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Hafriyat & Temel İzolasyonu',
         date: 'Mayıs 2025',
         description: 'Kentsel dönüşüm yıkım, hafriyat ve çift kat membran temel su yalıtımı yapıldı.',
-        image: '/src/assets/images/listing_cleopatra_penthouse_1793608562299.jpg',
+        image: '/ev7.jpg',
         progressPercent: 25,
         concretePercent: 30,
         facadePercent: 0,
@@ -429,7 +429,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Kaba Yapı Tamamlanması',
         date: 'Aralık 2025',
         description: 'Penthouse katları dahil tüm betonarme döşemeler tamamlandı.',
-        image: '/src/assets/images/listing_cleopatra_penthouse_1793608562299.jpg',
+        image: '/ev6.jpg',
         progressPercent: 60,
         concretePercent: 100,
         facadePercent: 40,
@@ -440,7 +440,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Çatı Terasları & Havuz İmalatları',
         date: 'Nisan 2026',
         description: 'Çatı katı jakuzileri, cephe kaplamaları ve asansör montajları sürüyor.',
-        image: '/src/assets/images/listing_cleopatra_penthouse_1793608562299.jpg',
+        image: '/ev4.jpg',
         progressPercent: 75,
         concretePercent: 100,
         facadePercent: 80,
@@ -455,7 +455,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
     deliveryDate: 'Eylül 2026',
     totalUnits: 14,
     currentProgressPercent: 68,
-    heroImage: '/src/assets/images/listing_bektas_mansion_1793608562116.jpg',
+    heroImage: '/ev8.jpg',
     videoUrl: '', // Ready for user's uploaded video file
     description: 'Toros Dağları yamaçlarında Alanya Kalesi ve kesintisiz Akdeniz körfezi manzaralı 14 adet özel akıllı villa kompleksi.',
     milestones: [
@@ -464,7 +464,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Kaya Ankrajı & Yamaç Teraslama',
         date: 'Haziran 2025',
         description: 'Yamaç kademelendirme, kaya ankrajları ve zemin güçlendirme çalışmaları tamamlandı.',
-        image: '/src/assets/images/listing_bektas_mansion_1793608562116.jpg',
+        image: '/ev1.jpg',
         progressPercent: 25,
         concretePercent: 30,
         facadePercent: 0,
@@ -475,7 +475,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Müstakil Villa Karkasları & Sonsuzluk Havuzları',
         date: 'Ocak 2026',
         description: '14 bağımsız villanın taşıyıcı sistemleri ve havuz çanakları tamamlandı.',
-        image: '/src/assets/images/listing_bektas_mansion_1793608562116.jpg',
+        image: '/ev2.jpg',
         progressPercent: 55,
         concretePercent: 95,
         facadePercent: 35,
@@ -486,7 +486,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Doğal Taş Kaplama & Akıllı Ev Altyapısı',
         date: 'Nisan 2026',
         description: 'Geniş cam cephelerin montajı, yerden ısıtma borulaması ve teras yalıtımları yapılıyor.',
-        image: '/src/assets/images/listing_bektas_mansion_1793608562116.jpg',
+        image: '/ev1.jpg',
         progressPercent: 68,
         concretePercent: 100,
         facadePercent: 70,
@@ -501,7 +501,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
     deliveryDate: 'Şubat 2027',
     totalUnits: 110,
     currentProgressPercent: 45,
-    heroImage: '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg',
+    heroImage: '/ev3.jpg',
     videoUrl: '', // Ready for user's uploaded video file
     description: 'Mahmutlar sahil yolunda denize 50 metre mesafede modern mimari ve zengin sosyal donatılara sahip rezidans kompleksi.',
     milestones: [
@@ -510,7 +510,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: 'Temel & Bodrum Katlar',
         date: 'Eylül 2025',
         description: 'Kapalı otopark, spa merkezi katları ve radye temel dökümleri tamamlandı.',
-        image: '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg',
+        image: '/ev5.jpg',
         progressPercent: 20,
         concretePercent: 35,
         facadePercent: 0,
@@ -521,7 +521,7 @@ export const TIMELAPSE_PROJECTS: TimelapseProject[] = [
         title: '5. Kat Betonarme Karkas',
         date: 'Mart 2026',
         description: 'Konut katlarının beton dökümleri hızla yükselmektedir.',
-        image: '/src/assets/images/listing_mahmutlar_residence_1793604907502.jpg',
+        image: '/ev7.jpg',
         progressPercent: 45,
         concretePercent: 70,
         facadePercent: 10,
