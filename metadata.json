@@ -1,0 +1,6 @@
+{
+  "name": "Alanya Prime Real Estate",
+  "description": "Alanya'da satılık ve kiralık lüks daireler, panoramik deniz manzaralı villalar, arsalar ve proje yatırımları sunan modern emlak platformu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
