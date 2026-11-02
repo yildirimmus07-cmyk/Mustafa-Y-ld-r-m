@@ -361,66 +361,71 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-6 space-y-4">
+            <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
                 <Play className="w-3.5 h-3.5 fill-current" />
-                <span>İnşaat Aşamaları Canlı Takip</span>
+                <span>9:16 Dikey Şantiye Videoları</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight">
-                Projelerin İnşaat Gelişimini Timelapse Fotoğraflarla İzleyin
+                Projelerin İnşaat Gelişimini 9:16 Dikey Timelapse Videolarıyla İzleyin
               </h2>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                Temel kazıklarından kaba inşaata, dış cephe giydirmeden lüks iç mimariye kadar Alanya’daki yeni yapıların ay ay gelişimini interaktif video oynatıcımız ve kare kontrolcümüz ile anlık inceleyin.
+                Temel kazıklarından kaba inşaata, dış cephe giydirmeden lüks iç mimariye kadar Alanya’daki yeni yapıların ay ay gelişimini mobil ve reels uyumlu 9:16 dikey formatta kesintisiz izleyin.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <button
                   onClick={() => navigateTo('timelapse')}
-                  className="px-5 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-xs transition-colors flex items-center gap-2 shadow-lg"
+                  className="px-5 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-xs transition-colors flex items-center gap-2 shadow-lg cursor-pointer"
                 >
                   <Play className="w-4 h-4 fill-current" />
-                  Timelapse Videolarını Başlat
+                  <span>9:16 Timelapse Galerisini Aç</span>
                 </button>
                 <button
                   onClick={() => navigateTo('listings')}
-                  className="px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-xs transition-colors"
+                  className="px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-xs transition-colors cursor-pointer"
                 >
-                  Projeleri Keşfet
+                  <span>Projeleri Keşfet</span>
                 </button>
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative">
+            <div className="lg:col-span-5 flex justify-center">
               <div 
                 onClick={() => navigateTo('timelapse')} 
-                className="group relative aspect-16/9 rounded-2xl overflow-hidden cursor-pointer shadow-2xl border border-white/10"
+                className="group relative w-full max-w-[240px] sm:max-w-[260px] aspect-[9/16] rounded-3xl overflow-hidden cursor-pointer shadow-2xl border-2 border-slate-700 bg-black hover:border-amber-500 transition-all duration-300"
               >
                 <img
                   src="/src/assets/images/timelapse_project_emerald_1793604907854.jpg"
-                  alt="Emerald Coast Timelapse"
+                  alt="Emerald Coast 9:16 Timelapse"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-black/30 group-hover:opacity-80 transition-opacity" />
+
+                {/* Top Badge */}
+                <div className="absolute top-3 inset-x-3 flex items-center justify-between text-[10px]">
+                  <span className="bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/10 text-white font-bold">
+                    9:16 Reels
+                  </span>
+                  <span className="bg-emerald-500 text-slate-950 px-2 py-0.5 rounded-full font-bold">
+                    %82
+                  </span>
+                </div>
 
                 {/* Big Center Play Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                    <Play className="w-7 h-7 fill-current ml-1" />
+                  <div className="w-14 h-14 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                    <Play className="w-6 h-6 fill-current ml-0.5" />
                   </div>
                 </div>
 
                 {/* Bottom Overlay Info */}
-                <div className="absolute bottom-4 inset-x-4 bg-slate-950/80 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between text-xs">
-                  <div>
-                    <div className="font-bold text-white">Emerald Coast Residences</div>
-                    <div className="text-[11px] text-amber-400">Genel İlerleme: %82 Tamamlandı</div>
-                  </div>
-                  <span className="text-slate-300 font-mono text-[11px] bg-white/10 px-2 py-1 rounded">
-                    4 İnşaat Aşaması
-                  </span>
+                <div className="absolute bottom-3 inset-x-3 bg-slate-950/80 backdrop-blur-md p-2.5 rounded-2xl border border-white/10 text-xs">
+                  <div className="font-bold text-white text-[11px] truncate">Emerald Coast Residences</div>
+                  <div className="text-[10px] text-amber-400">Kargıcak · 9:16 Video İzle</div>
                 </div>
               </div>
             </div>

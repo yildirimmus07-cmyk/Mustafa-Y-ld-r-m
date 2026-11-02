@@ -1017,88 +1017,102 @@ export const AdminPage: React.FC = () => {
               <div>
                 <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
                   <Video className="w-5 h-5 text-emerald-600" />
-                  <span>Timelapse Yapı Projeleri & Özel Videolar</span>
+                  <span>9:16 Dikey Timelapse Projeleri & Video Yönetimi</span>
                 </h2>
                 <p className="text-xs text-slate-500 mt-1">
-                  Şantiye projelerini yönetin; her projenin içerisine kendi timelapse videolarınızı (MP4 veya YouTube) ve inşaat aşamalarını ekleyin.
+                  Şantiyelerinize ait 9:16 dikey timelapse videolarını yükleyin. Ziyaretçiler sitede yalnızca izleyebilir, video ekleme/düzenleme yetkisi sadece bu paneldedir.
                 </p>
               </div>
 
               <button
                 onClick={handleOpenAddTimelapse}
-                className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-2 shadow-xs shrink-0"
+                className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-2 shadow-xs shrink-0 cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
-                <span>Yeni Proje / Video Ekle</span>
+                <span>+ Yeni Proje / 9:16 Video Ekle</span>
               </button>
             </div>
 
-            {/* Timelapse Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* 9:16 Format Guidance Banner */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-xs text-amber-950 flex items-start gap-3">
+              <Film className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="leading-relaxed">
+                <span className="font-bold">📱 9:16 Dikey Format Zorunluluğu:</span> Sitedeki timelapse oynatıcı ve kartlar 9:16 dikey formattadır. Telefonunuzla veya kameranızla dikey çekilmiş videoları (`.mp4`, `.mov`, `.webm`) veya dikey YouTube Shorts linklerini yükleyebilirsiniz. Ziyaretçilerin arayüzünde yükleme veya silme butonu bulunmaz.
+              </div>
+            </div>
+
+            {/* Timelapse Projects Grid in 9:16 Vertical Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {timelapseProjects.map((proj) => (
-                <div key={proj.id} className="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between">
+                <div key={proj.id} className="bg-slate-50 rounded-2xl p-4 border border-slate-200 flex flex-col justify-between">
                   <div>
-                    <div className="aspect-16/9 rounded-xl overflow-hidden bg-black mb-4 relative">
+                    {/* 9:16 Vertical Thumbnail Preview */}
+                    <div className="aspect-[9/16] rounded-xl overflow-hidden bg-black mb-3 relative group">
                       <img
                         src={proj.heroImage}
                         alt={proj.title}
                         className="w-full h-full object-cover"
                       />
-                      {proj.videoUrl && (
-                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-white text-[11px] font-bold flex items-center gap-1.5 border border-white/20">
-                          <Video className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Video Bağlantılı</span>
-                        </div>
-                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/30" />
+
+                      <div className="absolute top-2.5 right-2.5">
+                        {proj.videoUrl ? (
+                          <div className="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
+                            <Video className="w-3 h-3" />
+                            <span>9:16 Video Yüklü</span>
+                          </div>
+                        ) : (
+                          <div className="bg-black/70 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/30">
+                            Video Bekleniyor
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="absolute bottom-2.5 inset-x-2.5 text-white">
+                        <div className="text-[10px] font-semibold text-amber-400">{proj.district}</div>
+                        <div className="text-xs font-bold truncate">{proj.title}</div>
+                        <div className="text-[10px] text-slate-300 font-mono mt-0.5">İlerleme: %{proj.currentProgressPercent}</div>
+                      </div>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                      <span>{proj.district}</span>
-                      <span className="font-mono font-bold text-amber-700">İlerleme: %{proj.currentProgressPercent}</span>
-                    </div>
-
-                    <h3 className="font-bold text-slate-900 text-base mb-2">{proj.title}</h3>
-                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">{proj.description}</p>
+                    <h3 className="font-bold text-slate-900 text-sm mb-1 line-clamp-1">{proj.title}</h3>
+                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">{proj.description}</p>
 
                     {proj.videoUrl && (
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200 text-[11px] font-mono text-slate-700 mb-4 truncate">
-                        🎥 Video: {proj.videoUrl}
+                      <div className="p-2 bg-white rounded-lg border border-slate-200 text-[10px] font-mono text-slate-600 mb-3 truncate">
+                        🎥 {proj.videoUrl}
                       </div>
                     )}
-
-                    <div className="text-[11px] text-slate-400 mb-4">
-                      {proj.milestones?.length || 0} adet inşaat fazı tanımlı.
-                    </div>
                   </div>
 
                   <div className="flex items-center justify-between pt-3 border-t border-slate-200">
                     <button
                       onClick={() => navigateTo('timelapse')}
-                      className="text-xs font-bold text-amber-700 hover:text-amber-800 flex items-center gap-1"
+                      className="text-xs font-bold text-amber-700 hover:text-amber-800 flex items-center gap-1 cursor-pointer"
                     >
-                      <span>Sitede İzle</span>
                       <Eye className="w-3.5 h-3.5" />
+                      <span>Sitede Gör</span>
                     </button>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
                       <button
                         onClick={() => handleOpenEditTimelapse(proj)}
-                        className="px-3 py-1.5 bg-white hover:bg-slate-100 text-blue-700 border border-slate-200 rounded-lg text-xs font-semibold flex items-center gap-1"
+                        className="px-2.5 py-1.5 bg-white hover:bg-slate-100 text-blue-700 border border-slate-200 rounded-lg text-xs font-semibold flex items-center gap-1 cursor-pointer"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
-                        <span>Düzenle & Video Ekle</span>
+                        <span>9:16 Video Düzenle</span>
                       </button>
 
                       <button
                         onClick={() => {
-                          if (window.confirm('Bu timelapse projesini silmek istediğinize emin misiniz?')) {
+                          if (window.confirm(`"${proj.title}" projesini silmek istediğinize emin misiniz?`)) {
                             deleteTimelapseProject(proj.id);
                           }
                         }}
-                        className="p-1.5 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
+                        className="p-1.5 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
                         title="Projeyi Sil"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-3.5 h-3.5" />
                       </button>
                     </div>
                   </div>
@@ -1642,12 +1656,12 @@ export const AdminPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Video URL & Direct Video File Upload */}
+                {/* 9:16 Video URL & Direct Video File Upload */}
                 <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200 space-y-2">
                   <div className="flex items-center justify-between">
                     <label className="block text-xs font-bold text-amber-950 flex items-center gap-1.5">
                       <Video className="w-4 h-4 text-amber-600" />
-                      <span>Timelapse / Drone Videosu</span>
+                      <span>9:16 Dikey Timelapse Videosu</span>
                     </label>
                     <input
                       type="file"
@@ -1662,18 +1676,18 @@ export const AdminPage: React.FC = () => {
                       className="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold rounded-xl text-xs flex items-center gap-1.5 cursor-pointer transition-colors shadow-xs"
                     >
                       <UploadCloud className="w-3.5 h-3.5" />
-                      <span>📁 Video Dosyası Seç (.mp4, .mov, .webm)</span>
+                      <span>📁 9:16 Video Dosyası Seç</span>
                     </button>
                   </div>
                   <input
                     type="text"
                     value={tlVideoUrl}
                     onChange={(e) => setTlVideoUrl(e.target.value)}
-                    placeholder="Dosya seçin veya video linki (MP4 / YouTube) yapıştırın"
+                    placeholder="Dikey video dosyası seçin veya 9:16 linki (MP4 / YouTube Shorts) yapıştırın"
                     className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 font-mono text-[11px]"
                   />
                   <p className="text-[11px] text-amber-900 leading-relaxed">
-                    Videoyu doğrudan cihazınızdan seçebilirsiniz; video dosyası bu projeye özel olarak bağlanır.
+                    Videolar sitedeki dikey oynatıcıda 9:16 oranında (Reels / Shorts) gösterilir. Sitedeki ziyaretçiler yalnızca izleyebilir.
                   </p>
                 </div>
 
